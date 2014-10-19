@@ -26,6 +26,10 @@ public class MainPage extends Page
 
     private static TfsAsync remote = TfsAsyncFactory.get();
 
+    private static int HEADER_SIZE = 40;
+
+    @UiField(provided=true)
+    MainPage page = this;
     @UiField
     PushButton selectTorrent;
     @UiField
@@ -76,6 +80,8 @@ public class MainPage extends Page
             }
         });
     }
+
+    public int headerSize() {return HEADER_SIZE;}
 
     public static PageFactory getFactory()
     {

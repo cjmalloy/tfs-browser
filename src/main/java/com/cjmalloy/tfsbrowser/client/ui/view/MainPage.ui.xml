@@ -3,6 +3,7 @@
              xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
   <ui:with field="res" type="com.cjmalloy.tfsbrowser.client.ui.skin.StyleBundle" />
+  <ui:with field="page" type="com.cjmalloy.tfsbrowser.client.ui.view.MainPage" />
 
   <ui:style>
     .hbox > * {float: left;}
@@ -10,8 +11,8 @@
   </ui:style>
 
   <g:DockLayoutPanel unit="PX">
-    <g:north size="40">
-      <g:FlowPanel styleName="{style.hbox}">
+    <g:north size="{page.headerSize}">
+      <g:FlowPanel styleName="{res.style.header} {style.hbox}">
         <g:TextBox ui:field="infoHash" />
         <g:PushButton ui:field="selectTorrent" text="Select Torrent" />
       </g:FlowPanel>

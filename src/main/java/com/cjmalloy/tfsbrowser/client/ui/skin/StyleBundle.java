@@ -18,8 +18,6 @@ public interface StyleBundle extends ClientBundle
     public interface Style extends CssResource
     {
         String header();
-        String content();
-        String navBox();
     }
 
     public static class EnsureInjected
