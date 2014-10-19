@@ -1,10 +1,10 @@
 package com.cjmalloy.tfsbrowser.client.remote;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import org.fusesource.restygwt.client.MethodCallback;
 import org.fusesource.restygwt.client.RestService;
@@ -15,16 +15,16 @@ import com.google.gwt.core.client.GWT;
 @Path("/")
 public interface TfsAsync extends RestService
 {
-    @GET @Path("/add/{info_hash}")
-    void addTorrent(@PathParam("info_hash") String infoHash, MethodCallback<String> callback);
+//    @POST @Path("/add")
+//    void addTorrent(Byte[] torrent, MethodCallback<String> callback);
+//
+//    @POST @Path("/print")
+//    void printTorrent(Byte[] torrent, MethodCallback<String> callback);
 
-    @POST @Path("/print")
-    void requestLoginToken(@PathParam("info_hash") String infoHash, MethodCallback<String> callback);
+    @GET @Path("/status/{info_hash}")
+    void getStatus(@PathParam("info_hash") String infoHash, MethodCallback<TorrentStatus> callback);
 
-    @PUT @Path("/status")
-    void login(@PathParam("info_hash") String infoHash, MethodCallback<TorrentStatus> callback);
-
-    public static final class TfsAsuncFactory
+    public static final class TfsAsyncFactory
     {
         private static TfsAsync instance;
 
