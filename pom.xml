@@ -187,8 +187,13 @@
   <distributionManagement>
     <repository>
       <id>cjmalloy-repo</id>
-      <name>cjmalloy-repo-snapshots</name>
-      <url>http://cjmalloy.com/m2/ext-snapshots-local</url>
+      <name>cjmalloy-repo-releases</name>
+      <url>http://cjmalloy.com/m2/libs-release-local</url>
     </repository>
+    <snapshotRepository>
+      <id>cjmalloy-repo</id>
+      <name>cjmalloy-repo-snapshots</name>
+      <url>http://cjmalloy.com/m2/libs-snapshot-local</url>
+    </snapshotRepository>
   </distributionManagement>
 </project>
