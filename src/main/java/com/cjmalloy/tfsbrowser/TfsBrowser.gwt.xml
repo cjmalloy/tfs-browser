@@ -11,4 +11,6 @@
   <entry-point class='com.cjmalloy.tfsbrowser.client.TfsBrowser' />
 
   <source path='client' />
+
+  <add-linker name="xsiframe" />
 </module>
