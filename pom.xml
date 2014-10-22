@@ -5,7 +5,7 @@
   <groupId>com.cjmalloy</groupId>
   <artifactId>tfs-browser</artifactId>
   <packaging>war</packaging>
-  <version>0.1</version>
+  <version>0.2-SNAPSHOT</version>
   <name>tfs-browser</name>
 
   <properties>
@@ -21,7 +21,7 @@
     <dependency>
       <groupId>com.cjmalloy</groupId>
       <artifactId>torrent-fs-shared</artifactId>
-      <version>0.1</version>
+      <version>0.2-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
