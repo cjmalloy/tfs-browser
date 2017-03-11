@@ -2,6 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>com.cjmalloy</groupId>
+    <artifactId>cjmalloy</artifactId>
+    <version>0.2</version>
+  </parent>
+
   <groupId>com.cjmalloy</groupId>
   <artifactId>tfs-browser</artifactId>
   <packaging>war</packaging>
@@ -16,6 +22,17 @@
     <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>cjmalloy-central</id>
+      <url>http://cjmalloy.com/m2/libs-release</url>
+    </repository>
+    <repository>
+      <id>cjmalloy-repo</id>
+      <url>http://cjmalloy.com/m2/libs-snapshot</url>
+    </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
