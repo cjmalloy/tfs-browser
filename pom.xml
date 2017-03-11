@@ -200,11 +200,4 @@
       </plugins>
     </pluginManagement>
   </build>
-
-  <repositories>
-    <repository>
-      <id>cjmalloy-repo</id>
-      <url>http://cjmalloy.com/m2/libs-snapshot</url>
-    </repository>
-  </repositories>
 </project>
