@@ -1,24 +1,31 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
-<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+<ui:UiBinder xmlns:g="urn:import:com.google.gwt.user.client.ui"
+  xmlns:ui="urn:ui:com.google.gwt.uibinder">
 
-  <ui:with field="res" type="com.cjmalloy.tfsbrowser.client.ui.skin.StyleBundle" />
-  <ui:with field="page" type="com.cjmalloy.tfsbrowser.client.ui.view.MainPage" />
+  <ui:with field="res" type="com.cjmalloy.tfsbrowser.client.ui.skin.StyleBundle"/>
+  <ui:with field="page" type="com.cjmalloy.tfsbrowser.client.ui.view.MainPage"/>
 
   <ui:style>
-    .hbox > * {float: left;}
-    .iframe {border: none; margin: 0; padding: 0;}
+    .hbox > * {
+      float: left;
+    }
+
+    .iframe {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
   </ui:style>
 
   <g:DockLayoutPanel unit="PX">
     <g:north size="{page.headerSize}">
       <g:FlowPanel styleName="{res.style.header} {style.hbox}">
-        <g:TextBox ui:field="infoHash" />
-        <g:PushButton ui:field="selectTorrent" text="Select Torrent" />
+        <g:TextBox ui:field="infoHash"/>
+        <g:PushButton text="Select Torrent" ui:field="selectTorrent"/>
       </g:FlowPanel>
     </g:north>
     <g:center>
-      <g:Frame ui:field="iframe" styleName="{style.iframe}" />
+      <g:Frame styleName="{style.iframe}" ui:field="iframe"/>
     </g:center>
   </g:DockLayoutPanel>
 </ui:UiBinder>

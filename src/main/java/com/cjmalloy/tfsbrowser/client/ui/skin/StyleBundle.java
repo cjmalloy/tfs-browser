@@ -6,26 +6,23 @@ import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.CssResource;
 
 
-public interface StyleBundle extends ClientBundle
-{
-    public static final StyleBundle INSTANCE = GWT.create(StyleBundle.class);
-    public static final int TRANSITION_REMOVE_DELAY = 0;
+public interface StyleBundle extends ClientBundle {
 
-    Style style();
+  StyleBundle INSTANCE = GWT.create(StyleBundle.class);
+  int TRANSITION_REMOVE_DELAY = 0;
 
-    PageTransition transition();
+  interface Style extends CssResource {
+    String header();
+  }
 
-    public interface Style extends CssResource
-    {
-        String header();
+  Style style();
+
+  PageTransition transition();
+
+  class EnsureInjected {
+    public static void inject() {
+      INSTANCE.style().ensureInjected();
+      INSTANCE.transition().ensureInjected();
     }
-
-    public static class EnsureInjected
-    {
-        public static void inject()
-        {
-            INSTANCE.style().ensureInjected();
-            INSTANCE.transition().ensureInjected();
-        }
-    }
+  }
 }
